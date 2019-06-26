@@ -9,7 +9,7 @@ O Spark Structured Streaming é um mecanismo de processamento de fluxo de dados 
 * Definir o ip do host onde no qual irá acessar o thingsboard.
 * Definir o token do device ao qual será exibido os dados no thingsboard.
 * Definir uma função que será chamada no “.foreach” e receberá cada linha do data frame para ser enviado ao thingsboard.
-* Processar a linha do data frame, definindo a chave e resgatando o valor que foi gerado no data frame através do “__getitem__”.
+* Processar a linha do data frame, definindo a chave e resgatando o valor que foi gerado no data frame através do “_\_\getitem_\_\”.
 * Criar a conexão mqtt.
 * Setar o token do dispositivo no qual será enviado o dado.
 * Conectar com o host, setando o ip, a porta e o tempo de checagem entre os dois dispositivos.
