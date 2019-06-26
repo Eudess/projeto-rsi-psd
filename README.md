@@ -5,15 +5,15 @@ O Spark Structured Streaming é um mecanismo de processamento de fluxo de dados 
 
 ## 	Conexão MQTT:
 	
-Instalar a biblioteca paho-mqtt.
-Definir o ip do host onde no qual irá acessar o thingsboard.
-Definir o token do device ao qual será exibido os dados no thingsboard.
-Definir uma função que será chamada no “.foreach” e receberá cada linha do data frame para ser enviado ao thingsboard.
-Processar a linha do data frame, definindo a chave e resgatando o valor que foi gerado no data frame através do “__getitem__”.
-Criar a conexão mqtt.
-Setar o token do dispositivo no qual será enviado o dado.
-Conectar com o host, setando o ip, a porta e o tempo de checagem entre os dois dispositivos.
-Publicar os dados no thingsboard, que por padrão é no endereço 'v1/devices/me/telemetry', os dados terão que ser convertidos para o formato json para ser enviado.
+* Instalar a biblioteca paho-mqtt.
+* Definir o ip do host onde no qual irá acessar o thingsboard.
+* Definir o token do device ao qual será exibido os dados no thingsboard.
+* Definir uma função que será chamada no “.foreach” e receberá cada linha do data frame para ser enviado ao thingsboard.
+* Processar a linha do data frame, definindo a chave e resgatando o valor que foi gerado no data frame através do “__getitem__”.
+* Criar a conexão mqtt.
+* Setar o token do dispositivo no qual será enviado o dado.
+* Conectar com o host, setando o ip, a porta e o tempo de checagem entre os dois dispositivos.
+* Publicar os dados no thingsboard, que por padrão é no endereço 'v1/devices/me/telemetry', os dados terão que ser convertidos para o formato json para ser enviado.
 
 
 
@@ -35,8 +35,7 @@ Função para processar data frame e enviar dados para o thingsboard.
 
 def processRow(row):
     print(row)
-    # row_data = "{" + row.key + ":" + str(row.count) + "}"
-    row_data = { "probe" : row.__getitem__("count")}
+    row_data = { row.key + : row.__getitem__("count") }
     # Write row to storage
     client = mqtt.Client()
     # Set access token
