@@ -1,7 +1,15 @@
 # Envio de Dados do Spark Structured Stream para o ThingsBoard via MQTT
 
+## Spark
+O Spark Structured Streaming é um mecanismo de processamento de fluxo de dados construído sobre o mecanismo Spark SQL, capaz de ler grandes fluxos de dados de forma incremental e continuamente atualizar o resultado final a medida que os dados vão chegando.
 
-O Spark Structured Streaming é um mecanismo de processamento de fluxo de dados construído sobre o mecanismo Spark SQL, capaz de ler grandes fluxos de dados de forma incremental e continuamente atualizar o resultado final a medida que os dados vão chegando. Já o ThingsBoard é uma plataforma aberta de IoT para coleta, processamento e visualização de dados e gerenciamento de dispositivos. Através do uso do protocolo de comunicação MQTT (Message Queueing Telemetry Transport) é possível enviar fluxos de dados estruturados computados no Spark com o uso de uma Dataset/DataFrame API em Scala, Java, Python ou R, para visualização no ThingsBoard. No tutorial a seguir fazemos uma pequena demonstração utilizando o Pyspark(python):
+## ThingsBoard
+Já o ThingsBoard é uma plataforma aberta de IoT para coleta, processamento e visualização de dados e gerenciamento de dispositivos. 
+
+## MQTT
+É um protocolo de comunicação MQTT (Message Queueing Telemetry Transport)
+
+Com o MQTT, é possível enviar fluxos de dados estruturados computados no Spark com o uso de uma Dataset/DataFrame API em Scala, Java, Python ou R, para visualização no ThingsBoard. No tutorial a seguir fazemos uma pequena demonstração utilizando o Pyspark(python):
 
 ## 	Conexão MQTT:
 	
