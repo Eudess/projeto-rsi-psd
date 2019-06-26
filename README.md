@@ -21,7 +21,7 @@ Publicar os dados no thingsboard, que por padrão é no endereço 'v1/devices/me
 
 
 
-```
+```python
 Enviando o data frame para a função.
 #Start running the query that prints the running counts to the console
     query = df_count_probe\
