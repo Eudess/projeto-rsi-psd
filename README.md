@@ -35,8 +35,9 @@ Função para processar data frame e enviar dados para o thingsboard.
 
 def processRow(row):
     print(row)
-    row_data = { row.key + : row.__getitem__("count") }
     # Write row to storage
+    row_data = { row.key + : row.__getitem__("count") }
+    #Create a mqtt client
     client = mqtt.Client()
     # Set access token
     client.username_pw_set(ACCESS_TOKEN)
